@@ -8,21 +8,21 @@
    return navigator.userAgent;
   }
   alipayURL="HTTPS://QR.ALIPAY.COM/FKX004086SB7G3YAQRWE5F";//从支付宝收款二维码里得到的URL
-  wechatURL="wxp://f2f0wQrllxwoawVF53EbhyOmylopnAggQPRr";
-  qqURL="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=3EB8894003B7F209525B77E7792DF13D97233301C011EB281D78D504E6D715A2&u=2728298745&n=%E8%BF%87%E5%8E%BB%E8%BF%87%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BF%87%E5%8E%BB%E9%83%BD%E4%BC%9A%E8%BF%87%E5%8E%BB";
+  //wechatURL="wxp://f2f0wQrllxwoawVF53EbhyOmylopnAggQPRr";
+  //qqURL="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=3EB8894003B7F209525B77E7792DF13D97233301C011EB281D78D504E6D715A2&u=2728298745&n=%E8%BF%87%E5%8E%BB%E8%BF%87%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BF%87%E5%8E%BB%E9%83%BD%E4%BC%9A%E8%BF%87%E5%8E%BB";
   wechat = "MicroMessenger";
   alipay = "AlipayClient";
   qq = "QQ";
   userAgent = getUA();
   if(userAgent.indexOf(wechat)!=-1){
    //微信
-   window.location.href=wechatURL;
+   window.location.href="static/wechat.png";
   }else if(userAgent.indexOf(alipay)!=-1){
    //支付宝
    window.location.href=alipayURL;
   }else if(userAgent.indexOf(qq)!=-1){
    //QQ
-   window.location.href=qqURL;
+   window.location.href="static/qq.png";
   }else{
    //不是支付宝或微信中的一个
    alert("无法识别的客户端！请在QQ、微信或支付宝内打开！");
